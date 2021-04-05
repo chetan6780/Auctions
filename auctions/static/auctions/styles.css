@@ -1,0 +1,53 @@
+body {
+    background-color: #fff;
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+#bid {
+   font-weight: bold;
+}
+
+#price {
+    color: red;
+ }
+
+ #bid-button {
+     margin-bottom: 20px;
+ }
+
+
+.card {
+    border: 2px solid red;
+}
+
+#close-auction {
+    margin-left: 70px;
+    margin-bottom: 30px;
+}
+
+.pb-cmnt-container {
+    font-family: Helvetica Neue;
+    margin-top: 10px;
+    margin-left: -60px;
+}
+
+.pb-cmnt-textarea {
+    resize: none;
+    padding: 20px;
+    height: 130px;
+    width: 100%;
+    /* border: 1px solid #989595; */
+}
+
+.cntnr {
+    width: 60%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(200, 200, 200);
+    border-radius:10px;
+}

@@ -1,0 +1,86 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+<div class="container">
+      {% if listing.is_closed and user == listing.bid.user %}
+      <div class="alert alert-success" role="alert">
+            Congratulations {{ listing.bid.user }}, you won the Auction!
+      </div>
+      {% endif %}
+
+      {% if is_owner and not listing.is_closed%}
+      <a class="btn btn-danger float-right" id="close-auction" href="{% url 'close_auction' listing.id%}"> Close Auction
+      </a>
+      {% endif %}
+
+      <div class="container">
+            {% if message %}
+            {% if updated %}
+            <div class="alert alert-success" role="alert">
+                  {{ message }}
+            </div>
+            {% else %}
+            <div class="alert alert-danger" role="alert">
+                  {{ message }}
+            </div>
+            {% endif %}
+            {% endif %}
+
+            <span class="badge badge-pill badge-warning">{{ listing.category }}</span>
+            <h1>{{listing.title }}</h1>
+            <div class="text-center">
+                  <img src="{{ listing.url }}" class="img-fluid" alt="Listing picture"><br><br>
+                  <p> {{ listing.description }} </p>
+                  <p id="bid">Current bid: <span id="price">{{ listing.bid }}</span></p>
+                  {% if is_listing_in_watchlist%}
+                  <a class="btn btn-danger" href="{% url 'remove_watchlist' listing.id %}"> Remove from watchlist </a>
+                  {% else %}
+                  <a class="btn btn-success" href="{% url 'add_watchlist' listing.id %}"> Add to watchlist </a>
+                  {% endif %}
+            </div>
+
+            {% if user.is_authenticated and not listing.is_closed%}
+            <form action="{% url 'new_bid' listing.id%}" method="post">
+                  {% csrf_token %}
+                  <label>New Bid:</label>
+                  <div class="row">
+                        <div class="col-3">
+                              <input type="text" name="bid" class="form-control" id="exampleFormControlInput1"
+                                    style="width:100%">
+                        </div>
+                        <div class="col-9">
+                              <button id="bid-button" class="btn btn-outline-primary" type="submit">Make a new
+                                    bid</button>
+                        </div>
+                  </div>
+            </form>
+
+
+            <form action="{% url 'comment' listing.id%}" method="post">
+                  {% csrf_token %}
+                  <div class="card card-info">
+                        <textarea name="comment" placeholder="Write your comment here!"
+                              class="pb-cmnt-textarea"></textarea>
+                        <input type="submit" class="btn btn-primary m-3" style="width:20%" type="button"></button>
+                  </div>
+            </form>
+            {% endif %}
+      </div>
+</div>
+<div class="cntnr mt-5" style="width:85%">
+      <h2 class="pt-2 pl-2 pb-0 mb-1">Comments </h2>
+      {% for comment in comments %}
+      <div class="card my-2">
+            <h5 class="card-header">
+                  Written by <strong>{{comment.writer}}</strong>
+            </h5>
+            <div class="card-body">
+                  <p class="card-text">{{comment.text}}</p>
+            </div>
+      </div>
+      {% endfor %}
+      <br>
+</div>
+<br><br>
+{% endblock %}

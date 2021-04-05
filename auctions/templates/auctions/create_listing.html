@@ -1,0 +1,39 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="cntnr">
+  <div class="text-center">
+    <h2 class="pt-2">Create New Listing</h2>
+  </div>
+  {% if message %}
+  <div>{{ message }}</div>
+  {% endif %}
+
+  <form class="mb-5" action="{% url 'create_listing'%}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" name="title" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Description</label>
+      <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Bid</label>
+      <input type="text" name="bid" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="form-group">
+      <label>category</label>
+      <input type="text" name="category" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="form-group">
+      <label>Image URL</label>
+      <input type="text" name="image_url" class="form-control" id="exampleFormControlInput1" value="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg">
+    </div>
+    <button class="btn btn-primary mb-3" type="submit">Submit</button>
+  </form>
+</div>
+{% endblock %}
