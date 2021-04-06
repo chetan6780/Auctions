@@ -1,15 +1,15 @@
 # Auctions
 ### How to use it
-- **Register** yourself if you are new here.(Please use good username)
-- **login** to your account if not already loged in.
-- select the item which you liked and **bid** on it 
-- Make sure that your bid is **high enough**
-- you can comment in **comment section** of the perticular item 
-- After owener close the Auction the user with **highest bid** will win
-- **winner** will able to see message in the lising of that perticular item.
+- **Register** yourself if you are new here.(Please use good username).
+- **Login** to your account if not already loged in.
+- Select the item which you liked and **bid** on it.
+- Make sure that your bid is **high enough**.
+- You can comment in **comment section** of the perticular item.
+- After owener close the Auction the user with ***highest bid*** will win.
+- **Winner** will able to see message in the lising of that perticular item.
 - Invite your friend to do bidding and have **fun**!!😃🤟 
 
-### See  live <a href="https://auctionscom.herokuapp.com/">here</a>
+### Click <a href="https://auctionscom.herokuapp.com/">here</a> to open the auction.
 
 # How to set up on local machine
 
