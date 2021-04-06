@@ -47,4 +47,4 @@ Once `pip` has finished downloading the dependencies:
 (env)$ python manage.py migrate
 (env)$ python manage.py runserver
 ```
-The blog application should be running on `http://127.0.0.1:8000/`
+The application should be running on `http://127.0.0.1:8000/`
