@@ -5,7 +5,7 @@
 - select the item which you liked and **bid** on it 
 - Make sure that your bid is **high enough**
 - you can comment in **comment section** of the perticular item 
-- After owener close the Auction the user with highest bid will win
+- After owener close the Auction the user with **highest bid** will win
 - **winner** will able to see message in the lising of that perticular item.
 - Invite your friend to do bidding and have **fun**!!😃🤟 
 
