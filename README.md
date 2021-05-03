@@ -15,7 +15,7 @@
 
 ## Pre-setup
 Create a new folder anywhere on your system
-open terminal in this new folder
+open terminal in this new folder.
 
 ## Setup
 
