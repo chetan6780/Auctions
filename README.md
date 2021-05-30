@@ -19,29 +19,35 @@ open terminal in this new folder.
 
 ## Setup
 
-The first thing to do is to clone the repository:
+1. The first thing to do is to clone the repository:
 
 ```sh
 $ git clone https://github.com/chetan6780/Auctions.git
 $ cd Auctions
 ```
 
-Create a virtual environment to install dependencies in and activate it:
+2. Create a virtual environment to install dependencies in and activate it:
 
 ```sh
 $ virtualenv env
 $ .\env\Scripts\activate
 ```
+**OR**<br/>
+```sh
+$ pip install pipenv
+$ pipenv shell
+```
 
-Then install the dependencies:
+3. install the dependencies:
 
 ```sh
 (env)$ pip install -r requirements.txt
 ```
-Note the `(env)` in front of the prompt. This indicates that this terminal
+*Note: `(env)` in front of the prompt. This indicates that this terminal
 session operates in a virtual environment set up by `virtualenv`.
+For pipenv you will not see any `(env)` in front of the propt.*
 
-Once `pip` has finished downloading the dependencies:
+4. Once `pip` has finished downloading the dependencies:
 ```sh
 (env)$ python manage.py makemigrations
 (env)$ python manage.py migrate
