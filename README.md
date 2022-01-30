@@ -7,7 +7,7 @@
 - You can comment in **comment section** of the perticular item.
 - After owener close the Auction the user with ***highest bid*** will win.
 - **Winner** will able to see message in the lising of that perticular item.
-- Have **fun** bidding!!😃🤟 
+- Have **fun** bidding!😃🤟 
 
 ### Click <a href="https://auctionscom.herokuapp.com/">here</a> to open the auctions.
 
